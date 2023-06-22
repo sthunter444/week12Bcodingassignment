@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Diary</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: rgb(95, 95, 248);
+    }
+
+    .container {
+      color: rgb(11, 2, 28);
+    }
+
+    .entry {
+      border: 2px solid rgb(213, 9, 9);
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: rgb(47, 242, 242);
+    }
+
+    .entry h4 {
+      margin-top: 0;
+    }
+
+    .entry p {
+      margin-bottom: 0;
+    }
+
+    .entry-actions {
+      margin-top: 10px;
+    }
+
+    .edit-entry {
+      background-color: rgb(241, 134, 241);
+      color: white;
+    }
+
+    .delete-entry {
+      background-color: rgb(131, 234, 140);
+      color: white;
+    }
+
+    .footer {
+      position: fixed;
+      bottom:0 ;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Personal Diary</h1>
+    <form id="diaryForm">
+      <div class="form-group">
+        <label for="entryText">Entry:</label>
+        <textarea class="form-control" id="entryText" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="entryDate">Date:</label>
+        <input type="date" class="form-control" id="entryDate" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Entry</button>
+    </form>
+    <hr>
+    <div id="diaryEntries"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
